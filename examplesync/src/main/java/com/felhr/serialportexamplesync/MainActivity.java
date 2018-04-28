@@ -83,7 +83,14 @@ public class MainActivity extends AppCompatActivity {
                 if (!editText.getText().toString().equals("")) {
                     String data = editText.getText().toString();
                     if (usbService != null) { // if UsbService was correctly binded, Send data
-                        usbService.write(data.getBytes());
+                        int trueLen=usbService.write(data.getBytes());
+                        if(trueLen>0)
+                            Toast.makeText(MainActivity.this, "发送 字节="+data.getBytes().length+" 实际发送="+trueLen,Toast.LENGTH_SHORT).show();
+                        else
+                        {
+                                Intent startService = new Intent(MainActivity.this, UsbService.class);
+                                startService(startService);
+                        }
                     }
                 }
             }

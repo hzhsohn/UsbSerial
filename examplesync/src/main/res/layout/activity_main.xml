@@ -6,7 +6,9 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="16dp"
-                tools:context="com.felhr.serialportexamplesync.MainActivity">
+                tools:context="com.felhr.serialportexamplesync.MainActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
     <TextView
         android:id="@+id/textViewTitle"
@@ -35,9 +37,9 @@
         android:layout_alignRight="@+id/textView1"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="28dp"
-        android:ems="10">
+        android:ems="10"
+        android:text="123abc">
 
-        <requestFocus/>
     </EditText>
 
     <Button
