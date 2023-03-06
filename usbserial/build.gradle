@@ -2,8 +2,7 @@ apply plugin: 'com.android.library'
 def artifact = "usbserial.jar"
 android {
     group = 'com.felhr.usbserial'
-    version = project.VERSION_NAME
-    compileSdkVersion 24
+    compileSdkVersion 33
     compileOptions {
         encoding "UTF-8"
         sourceCompatibility JavaVersion.VERSION_1_7
@@ -11,8 +10,7 @@ android {
     }
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 19
-        archivesBaseName = "${project.name}-${project.VERSION_NAME}"
+        targetSdkVersion 33
     }
     //noinspection GroovyAssignabilityCheck
     task deleteJar(type: Delete) {
